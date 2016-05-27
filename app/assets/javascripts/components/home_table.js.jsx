@@ -1,8 +1,4 @@
 var HomeTable = React.createClass({
-  propTypes: {
-    zipCode: React.PropTypes.string,
-    town: React.PropTypes.string
-  },
   render: function() {
     var rowNodes = this.props.data.map(function(data) {
       return (

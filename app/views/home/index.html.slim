@@ -1,8 +1,0 @@
-.text-center
-  = form_tag "/search", method: "get", class: "form-inline" do
-
-    .form-group
-      = text_field_tag :q, nil, class: "form-control", placeholder: "Rechercher"
-      
-    = submit_tag "Search", class: "btn btn-default"
-      
