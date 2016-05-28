@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_commune_insee: 1
+  nom_commune: MyString
+  code_postal: 1
+  libelle_acheminement: MyString
+  ligne_5: MyString
+
+two:
+  code_commune_insee: 1
+  nom_commune: MyString
+  code_postal: 1
+  libelle_acheminement: MyString
+  ligne_5: MyString

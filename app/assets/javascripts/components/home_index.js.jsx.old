@@ -1,0 +1,32 @@
+var HomeIndex = React.createClass({
+  getInitialState: function () {
+    return { towns: []};
+  },
+  componentDidMount: function() {
+    $.ajax({
+     url: '/',
+     dataType: 'json',
+     type: 'POST',
+     success: function(towns) {
+       if(!towns){
+         towns = [];
+       }
+       console.log(towns);
+       this.setState({ towns: towns });
+     }.bind(this),
+     error: function(xhr, status, err) {
+       console.error(this.props.url, status, err.toString());
+     }.bind(this)
+   });
+  },
+  render: function() {
+    console.log(this.props.towns);
+    return (
+      <div className="container application--margin">
+        <HomeSearch onSearchSubmit={this.handleSearchSubmit} />
+
+        <HomeTable towns={this.state.towns} />
+      </div>
+    );
+  }
+});

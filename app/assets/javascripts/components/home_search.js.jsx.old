@@ -1,16 +1,17 @@
 var HomeSearch = React.createClass({
   getInitialState: function() {
-    return {search: ''};
+      return {search: ''};
   },
   handleSearchChange: function(e) {
     this.setState({search: e.target.value});
   },
-  handleSubmit: function(e){
+  handleSubmit: function(e) {
     e.preventDefault();
     var search = this.state.search.trim();
     if (!search) {
       return;
     }
+    // console.log(search);
     this.props.onSearchSubmit({search: search});
     this.setState({search: ''});
   },
@@ -20,9 +21,9 @@ var HomeSearch = React.createClass({
         <div className="form-group" >
           <input
             type="text"
-            placeholder="Your name"
+            placeholder="Your search"
             className="form-control"
-            value={this.state.author}
+            value={this.state.search}
             onChange={this.handleSearchChange}
           />
         </div>

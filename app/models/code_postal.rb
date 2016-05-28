@@ -1,0 +1,2 @@
+class CodePostal < ApplicationRecord
+end

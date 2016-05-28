@@ -1,10 +1,10 @@
 var HomeTable = React.createClass({
   render: function() {
-    var rowNodes = this.props.data.map(function(data) {
+    var rowNodes = this.props.towns.map(function(town) {
       return (
-        <tr key={data.id}>
-          <td>{data.zipCode}</td>
-          <td>{data.town}</td>
+        <tr key={town.id}>
+          <td>{town.zipCode}</td>
+          <td>{town.town_name}</td>
         </tr>
       );
     });
