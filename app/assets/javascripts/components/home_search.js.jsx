@@ -11,9 +11,8 @@ var HomeSearch = React.createClass({
     if (!search) {
       return;
     }
-    // console.log(search);
     this.props.onSearchSubmit({search: search});
-    this.setState({search: ''});
+    // this.setState({search: ''});
   },
   render: function() {
     return (
